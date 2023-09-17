@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=3 uid="uid://6famcloenqr7"]
+
+[ext_resource type="PackedScene" uid="uid://c7gt1ov7ihhjq" path="res://Player/spear_man.tscn" id="1_aix7e"]
+
+[sub_resource type="Gradient" id="Gradient_whq7j"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.603922, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_27l81"]
+gradient = SubResource("Gradient_whq7j")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_etiwu"]
+size = Vector2(63.9461, 63)
+
+[node name="TestWorld" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-111, 608)
+scale = Vector2(18.5625, 1)
+texture = SubResource("GradientTexture2D_27l81")
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+position = Vector2(0.107742, -1)
+shape = SubResource("RectangleShape2D_etiwu")
+
+[node name="SpearMan" parent="." instance=ExtResource("1_aix7e")]
+position = Vector2(149, 449)
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(1294, 608)
+scale = Vector2(18.5625, 1)
+texture = SubResource("GradientTexture2D_27l81")
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D2/StaticBody2D"]
+position = Vector2(0.107742, -1)
+shape = SubResource("RectangleShape2D_etiwu")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(932, 439)
+scale = Vector2(6.8125, 1)
+texture = SubResource("GradientTexture2D_27l81")
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D3/StaticBody2D"]
+position = Vector2(0.107742, -1)
+shape = SubResource("RectangleShape2D_etiwu")

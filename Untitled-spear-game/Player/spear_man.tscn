@@ -1,3 +1,25 @@
-[gd_scene format=3 uid="uid://c7gt1ov7ihhjq"]
+[gd_scene load_steps=5 format=3 uid="uid://c7gt1ov7ihhjq"]
+
+[ext_resource type="Script" path="res://Player/PlayerController.gd" id="1_676eb"]
+
+[sub_resource type="Gradient" id="Gradient_yr2e4"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_14qee"]
+gradient = SubResource("Gradient_yr2e4")
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4vwdu"]
+radius = 17.0
+height = 66.0
 
 [node name="SpearMan" type="CharacterBody2D"]
+
+[node name="PlayerController" type="Node2D" parent="."]
+script = ExtResource("1_676eb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 1.90735e-06)
+scale = Vector2(0.53125, 1.04688)
+texture = SubResource("GradientTexture2D_14qee")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_4vwdu")
