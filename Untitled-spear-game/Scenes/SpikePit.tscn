@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://w6d50jd3gndx"]
+
+[ext_resource type="Script" path="res://Scenes/SpikePit.gd" id="1_ioyf2"]
+
+[sub_resource type="Gradient" id="Gradient_peb33"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.145098, 0.533333, 0.94902, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_pca2g"]
+gradient = SubResource("Gradient_peb33")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qt7rk"]
+
+[node name="SpikePit" type="Area2D"]
+script = ExtResource("1_ioyf2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(4.76837e-07, 0)
+scale = Vector2(0.3125, 0.3125)
+texture = SubResource("GradientTexture2D_pca2g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_qt7rk")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

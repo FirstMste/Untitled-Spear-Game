@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://c7gt1ov7ihhjq"]
+[gd_scene load_steps=9 format=3 uid="uid://c7gt1ov7ihhjq"]
 
 [ext_resource type="Script" path="res://Player/PlayerController.gd" id="1_676eb"]
+[ext_resource type="Script" path="res://Player/spear_man.gd" id="1_tcnmn"]
 
 [sub_resource type="Gradient" id="Gradient_yr2e4"]
 
@@ -11,7 +12,45 @@ gradient = SubResource("Gradient_yr2e4")
 radius = 17.0
 height = 66.0
 
+[sub_resource type="Animation" id="Animation_2tvpq"]
+resource_name = "Hit"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.490196), Color(1, 1, 1, 1), Color(1, 1, 1, 0.490196), Color(1, 1, 1, 1), Color(1, 1, 1, 0.490196), Color(1, 1, 1, 1), Color(1, 1, 1, 0.490196), Color(1, 1, 1, 1), Color(1, 1, 1, 0.490196), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_tf82f"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_c0my2"]
+_data = {
+"Hit": SubResource("Animation_2tvpq"),
+"RESET": SubResource("Animation_tf82f")
+}
+
 [node name="SpearMan" type="CharacterBody2D"]
+z_index = 10
+script = ExtResource("1_tcnmn")
 
 [node name="PlayerController" type="Node2D" parent="."]
 script = ExtResource("1_676eb")
@@ -23,3 +62,22 @@ texture = SubResource("GradientTexture2D_14qee")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_4vwdu")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Health" type="Label" parent="CanvasLayer"]
+offset_left = 79.0
+offset_top = 45.0
+offset_right = 119.0
+offset_bottom = 94.0
+theme_override_font_sizes/font_size = 35
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_c0my2")
+}
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
