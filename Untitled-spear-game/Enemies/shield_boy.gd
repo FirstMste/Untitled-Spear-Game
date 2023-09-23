@@ -26,6 +26,12 @@ func _ready():
 		Start_Direction.Right: velocity = Vector2.RIGHT
 
 func _physics_process(delta):
+	
+	# gravity just so they sit on the floor properly when placed.
+	if !is_on_floor():
+		velocity.y += gravity * delta
+	
+	
 	var ledge_Check = !floor_check_left.is_colliding() or !floor_check_right.is_colliding() or wall_checkright.is_colliding() or wall_check_left.is_colliding()
 	Ledge_Check(ledge_Check)
 	

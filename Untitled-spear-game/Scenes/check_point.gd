@@ -6,7 +6,6 @@ signal Check_Reached
 var SpawnPoint:Vector2
 
 func _ready():
-	await 2
 	SpawnPoint = self.global_position
 
 

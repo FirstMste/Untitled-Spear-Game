@@ -19,7 +19,6 @@ size = Vector2(64.5416, 63.8787)
 [node name="ShieldBoy" type="CharacterBody2D"]
 collision_layer = 4
 script = ExtResource("1_6mu7y")
-Direction = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = SubResource("GradientTexture2D_10nvc")

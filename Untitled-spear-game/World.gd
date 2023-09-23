@@ -17,6 +17,7 @@ func Connect_CheckPoints():
 	# get all checkpoints and connect them to the Respawn function.
 	var All_CheckPoints = get_tree().get_nodes_in_group("CheckPoints")
 	
+	
 	for Checks in All_CheckPoints:
 		Checks.connect("Check_Reached",Callable(self,"Set_New_Spawn"))
 
@@ -24,6 +25,7 @@ func Respawn(Health):
 	if Health > 0:
 		spear_man.global_position = Last_CheckPoint
 	else:
+		# replace this for prompt functionality to ask to restart level.
 		Last_CheckPoint = Start_Point
 		spear_man.global_position = Start_Point
 
