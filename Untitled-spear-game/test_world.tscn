@@ -1,8 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://6famcloenqr7"]
+[gd_scene load_steps=9 format=3 uid="uid://6famcloenqr7"]
 
 [ext_resource type="PackedScene" uid="uid://c7gt1ov7ihhjq" path="res://Player/spear_man.tscn" id="1_aix7e"]
 [ext_resource type="Script" path="res://World.gd" id="1_nw3el"]
-[ext_resource type="Script" path="res://Label.gd" id="2_f475k"]
 [ext_resource type="PackedScene" uid="uid://w6d50jd3gndx" path="res://Scenes/SpikePit.tscn" id="3_gsqkh"]
 [ext_resource type="PackedScene" uid="uid://bynf4mjj430xg" path="res://Scenes/check_point.tscn" id="5_ufbkj"]
 [ext_resource type="PackedScene" uid="uid://cxyhtsr231llp" path="res://Enemies/shield_boy.tscn" id="6_jhcix"]
@@ -96,20 +95,6 @@ metadata/_edit_group_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D6/StaticBody2D"]
 position = Vector2(0.107742, -1)
 shape = SubResource("RectangleShape2D_etiwu")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="Label" type="Label" parent="CanvasLayer"]
-visible = false
-offset_left = 891.0
-offset_top = 42.0
-offset_right = 1084.0
-offset_bottom = 100.0
-theme_override_font_sizes/font_size = 25
-text = "jump Pressed"
-horizontal_alignment = 1
-vertical_alignment = 1
-script = ExtResource("2_f475k")
 
 [node name="SpikePit2" parent="." instance=ExtResource("3_gsqkh")]
 position = Vector2(592, 607)
