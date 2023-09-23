@@ -16,7 +16,7 @@ func _ready():
 func Connect_CheckPoints():
 	# get all checkpoints and connect them to the Respawn function.
 	var All_CheckPoints = get_tree().get_nodes_in_group("CheckPoints")
-	print(All_CheckPoints)
+	
 	for Checks in All_CheckPoints:
 		Checks.connect("Check_Reached",Callable(self,"Set_New_Spawn"))
 

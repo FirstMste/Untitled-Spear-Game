@@ -13,6 +13,7 @@ gradient = SubResource("Gradient_xej6w")
 size = Vector2(40, 91)
 
 [node name="CheckPoint" type="Area2D" groups=["CheckPoints"]]
+collision_mask = 2
 script = ExtResource("1_qs044")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

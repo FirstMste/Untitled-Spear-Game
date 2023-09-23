@@ -50,6 +50,8 @@ _data = {
 
 [node name="SpearMan" type="CharacterBody2D"]
 z_index = 10
+collision_layer = 2
+collision_mask = 13
 script = ExtResource("1_tcnmn")
 
 [node name="PlayerController" type="Node2D" parent="."]
@@ -79,5 +81,11 @@ vertical_alignment = 1
 libraries = {
 "": SubResource("AnimationLibrary_c0my2")
 }
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(0, -120)
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

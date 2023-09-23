@@ -12,6 +12,7 @@ gradient = SubResource("Gradient_peb33")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qt7rk"]
 
 [node name="SpikePit" type="Area2D"]
+collision_mask = 2
 script = ExtResource("1_ioyf2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://6famcloenqr7"]
+[gd_scene load_steps=10 format=3 uid="uid://6famcloenqr7"]
 
 [ext_resource type="PackedScene" uid="uid://c7gt1ov7ihhjq" path="res://Player/spear_man.tscn" id="1_aix7e"]
 [ext_resource type="Script" path="res://World.gd" id="1_nw3el"]
 [ext_resource type="Script" path="res://Label.gd" id="2_f475k"]
 [ext_resource type="PackedScene" uid="uid://w6d50jd3gndx" path="res://Scenes/SpikePit.tscn" id="3_gsqkh"]
 [ext_resource type="PackedScene" uid="uid://bynf4mjj430xg" path="res://Scenes/check_point.tscn" id="5_ufbkj"]
+[ext_resource type="PackedScene" uid="uid://cxyhtsr231llp" path="res://Enemies/shield_boy.tscn" id="6_jhcix"]
 
 [sub_resource type="Gradient" id="Gradient_whq7j"]
 offsets = PackedFloat32Array(0)
@@ -46,8 +47,20 @@ metadata/_edit_group_ = true
 position = Vector2(0.107742, -1)
 shape = SubResource("RectangleShape2D_etiwu")
 
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(1375, 546)
+scale = Vector2(1.34375, 1)
+texture = SubResource("GradientTexture2D_27l81")
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D5/StaticBody2D"]
+position = Vector2(0.107742, -1)
+shape = SubResource("RectangleShape2D_etiwu")
+
 [node name="Sprite2D3" type="Sprite2D" parent="."]
-position = Vector2(661, 382)
+position = Vector2(855, 358)
 scale = Vector2(6.8125, 1)
 texture = SubResource("GradientTexture2D_27l81")
 metadata/_edit_group_ = true
@@ -55,6 +68,32 @@ metadata/_edit_group_ = true
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D3"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D3/StaticBody2D"]
+position = Vector2(0.107742, -1)
+shape = SubResource("RectangleShape2D_etiwu")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(1167, 512)
+rotation = 1.5708
+scale = Vector2(2.0855, 1)
+texture = SubResource("GradientTexture2D_27l81")
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D4/StaticBody2D"]
+position = Vector2(0.107742, -1)
+shape = SubResource("RectangleShape2D_etiwu")
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(1103, 541)
+rotation = 1.5708
+scale = Vector2(1.125, 1)
+texture = SubResource("GradientTexture2D_27l81")
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D6/StaticBody2D"]
 position = Vector2(0.107742, -1)
 shape = SubResource("RectangleShape2D_etiwu")
 
@@ -72,17 +111,19 @@ horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("2_f475k")
 
-[node name="SpikePit" parent="." instance=ExtResource("3_gsqkh")]
-position = Vector2(257, 529)
-
 [node name="SpikePit2" parent="." instance=ExtResource("3_gsqkh")]
-position = Vector2(774, 526)
+position = Vector2(592, 607)
+scale = Vector2(11.02, 3.1)
 
 [node name="SpikePit3" parent="." instance=ExtResource("3_gsqkh")]
-position = Vector2(1088, 526)
-
-[node name="CheckPoint" parent="." instance=ExtResource("5_ufbkj")]
-position = Vector2(414, 529)
+position = Vector2(1266, 544)
+scale = Vector2(6.635, 3.065)
 
 [node name="CheckPoint2" parent="." instance=ExtResource("5_ufbkj")]
 position = Vector2(936, 529)
+
+[node name="ShieldBoy" parent="." instance=ExtResource("6_jhcix")]
+position = Vector2(682, 293)
+
+[node name="ShieldBoy2" parent="." instance=ExtResource("6_jhcix")]
+position = Vector2(1596, 543)

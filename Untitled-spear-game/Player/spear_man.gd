@@ -18,9 +18,9 @@ func _ready():
 
 func Health_Handle():
 	if !Has_Been_Hit:
+		emit_signal("HIT",Health)
 		Has_Been_Hit = true
 		animation_player.play("Hit")
-		emit_signal("HIT",Health)
 		if Health > 0:
 			Health -= 1
 		else:

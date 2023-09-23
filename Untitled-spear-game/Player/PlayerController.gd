@@ -32,6 +32,10 @@ func Jump_Buffer_Handle():
 	if Jump_Buffer > 0:
 		Jump_Buffer -= 1
 
+func  variable_jump(delta):
+	if Input.is_action_just_released("Jump") and SpearMan.velocity.y < 0:
+		SpearMan.velocity.y = 250 * delta
+
 func Movement():
 	var Direction = Input.get_axis("MoveLeft","MoveRight")
 	
@@ -40,11 +44,14 @@ func Movement():
 	else:
 		SpearMan.velocity.x = move_toward(SpearMan.velocity.x, 0 ,Friction)
 
-func Jump():
+func Jump(delta):
 	if Jump_Buffer > 0 and Cayote_Jump_Buffer > 0:
 		SpearMan.velocity.y = Jump_Force
 		Jump_Buffer = 0
 		Cayote_Jump_Buffer = 0
+	
+	if SpearMan.velocity.y <= Jump_Force:
+		SpearMan.velocity.y += 300 * delta
 
 func _physics_process(delta):
 	SpearMan = get_parent() 
@@ -54,6 +61,7 @@ func _physics_process(delta):
 	Cayote_Handle()
 	Jump_Buffer_Handle()
 	Movement()
-	Jump()
+	variable_jump(delta)
+	Jump(delta)
 	
 	SpearMan.move_and_slide()
