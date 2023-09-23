@@ -52,5 +52,6 @@ hit_from_inside = true
 [node name="CollisionShape2D" parent="HitBox" index="0"]
 position = Vector2(0.0350914, -0.472122)
 shape = SubResource("RectangleShape2D_87vv2")
+debug_color = Color(0.988235, 0, 0.298039, 0.419608)
 
 [editable path="HitBox"]

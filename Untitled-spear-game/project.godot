@@ -20,6 +20,10 @@ config/icon="res://icon.svg"
 window/size/mode=3
 window/stretch/mode="viewport"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/kanban_tasks/plugin.cfg")
+
 [input]
 
 MoveRight={

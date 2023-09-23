@@ -1,0 +1,48 @@
+{
+	"categories": [
+		{
+			"uuid": "b4c2bcee-50d1-4188-ac72-064b103332bf",
+			"title": "Task",
+			"color": "70bafa"
+		}
+	],
+	"stages": [
+		{
+			"uuid": "62d5ffc1-097f-4caf-92ac-c0cbc2ee0d9a",
+			"title": "Todo",
+			"tasks": []
+		},
+		{
+			"uuid": "a1e0b4e8-d7d5-48db-9be8-390a83150fd0",
+			"title": "Doing",
+			"tasks": []
+		},
+		{
+			"uuid": "107030d6-3c44-4ae2-82e0-c8ccf5e6917c",
+			"title": "Done",
+			"tasks": []
+		}
+	],
+	"tasks": [
+		{
+			"uuid": "ebb71f64-c8d2-4e7a-8875-99c583efcc9a",
+			"title": "PlayerMovement",
+			"description": "",
+			"category": "b4c2bcee-50d1-4188-ac72-064b103332bf",
+			"steps": []
+		}
+	],
+	"layout": {
+		"columns": [
+			[
+				"62d5ffc1-097f-4caf-92ac-c0cbc2ee0d9a"
+			],
+			[
+				"a1e0b4e8-d7d5-48db-9be8-390a83150fd0"
+			],
+			[
+				"107030d6-3c44-4ae2-82e0-c8ccf5e6917c"
+			]
+		]
+	}
+}
