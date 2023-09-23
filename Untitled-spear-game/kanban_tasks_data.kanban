@@ -10,12 +10,19 @@
 		{
 			"uuid": "62d5ffc1-097f-4caf-92ac-c0cbc2ee0d9a",
 			"title": "Todo",
-			"tasks": []
+			"tasks": [
+				"6259f8ff-6178-4e2e-a315-b4423357927d",
+				"27a25010-e5b5-45c8-a424-059a93d724cd",
+				"c1814af5-2c58-4771-b9a1-9943698c9f4e",
+				"44bf4230-120a-4bbc-95c5-f3acda2d6805"
+			]
 		},
 		{
 			"uuid": "a1e0b4e8-d7d5-48db-9be8-390a83150fd0",
 			"title": "Doing",
-			"tasks": []
+			"tasks": [
+				"a71f4f50-5757-48f8-9f02-3394df767fa5"
+			]
 		},
 		{
 			"uuid": "107030d6-3c44-4ae2-82e0-c8ccf5e6917c",
@@ -25,8 +32,36 @@
 	],
 	"tasks": [
 		{
-			"uuid": "ebb71f64-c8d2-4e7a-8875-99c583efcc9a",
-			"title": "PlayerMovement",
+			"uuid": "6259f8ff-6178-4e2e-a315-b4423357927d",
+			"title": "Spear mechanics",
+			"description": "",
+			"category": "b4c2bcee-50d1-4188-ac72-064b103332bf",
+			"steps": []
+		},
+		{
+			"uuid": "27a25010-e5b5-45c8-a424-059a93d724cd",
+			"title": "Ranged enemy",
+			"description": "",
+			"category": "b4c2bcee-50d1-4188-ac72-064b103332bf",
+			"steps": []
+		},
+		{
+			"uuid": "c1814af5-2c58-4771-b9a1-9943698c9f4e",
+			"title": "tutorial level",
+			"description": "",
+			"category": "b4c2bcee-50d1-4188-ac72-064b103332bf",
+			"steps": []
+		},
+		{
+			"uuid": "44bf4230-120a-4bbc-95c5-f3acda2d6805",
+			"title": "enemies health system",
+			"description": "",
+			"category": "b4c2bcee-50d1-4188-ac72-064b103332bf",
+			"steps": []
+		},
+		{
+			"uuid": "a71f4f50-5757-48f8-9f02-3394df767fa5",
+			"title": "think of theme",
 			"description": "",
 			"category": "b4c2bcee-50d1-4188-ac72-064b103332bf",
 			"steps": []
