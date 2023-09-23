@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://dgtgptnnn2a6n"]
+
+[ext_resource type="Script" path="res://Enemies/HitBox.gd" id="1_53o76"]
+
+[node name="HitBox" type="Area2D"]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_53o76")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.00233936, -0.126884)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
